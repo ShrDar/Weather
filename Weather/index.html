@@ -9,29 +9,37 @@
 </head>
 <body>
     <div class="container">
+        <div class="search-bar">
+            <input type="text" id="search" spellcheck="false"></input>
+            <button id="sbutton" onclick="searched(fetchweather)"><img src="https://cdn-icons-png.flaticon.com/512/639/639375.png"></button>        
+        </div>
         <div class="location">
-            <img src="https://cdn-icons-png.flaticon.com/512/814/814513.png">
-            <p>Tuskegee</p>
+            <img src="Pictures/location.png">
+            <p id="city">Tuskegee</p>
         </div>
         <div class="wicon">
-            <p id="temp">20<span>&#176;</span></p>
+            <p id="temp">20<span>&#176;</span>C</p>
             <p id="status">Mostly Cloudy</p>
-            <img src="https://cdn-icons-png.flaticon.com/512/1146/1146869.png">
+            <img id="weather-icon" src="Pictures/mostlycloudy.png">
         </div>
-        <div class="days">
+        <div class="extras">
             <div class="day">
-                <p>Wednesday</p>
-                <img src="https://cdn-icons-png.flaticon.com/512/3351/3351962.png">
+                <img src="Pictures/umbrella.png">
+                <p>Rain: </p>
+                <p id="rainp">0.0mm</p>
             </div>
             <div class="day">
-                <p>Thursday</p>
-                <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png">
+                <img src="Pictures/humidity.png">
+                <p>Humidity:</p>
+                <p id="humidp">40%</p>
             </div>
             <div class="day">
-                <p>Friday</p>
-                <img src="https://cdn-icons-png.flaticon.com/512/1146/1146860.png">
+                <img src="Pictures/wind.png">
+                <p>Wind:</p>
+                <p id="windp">9m/s</p>
             </div>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

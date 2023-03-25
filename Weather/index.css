@@ -15,16 +15,48 @@ body{
     justify-content: center;
     align-items: center;
 }
+.container .search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .search-bar button{
+    height: 20px;
+    width: 20px;
+    border: 0.1px solid #000;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #e1edf4;
+    transition: 0.3s;
+}
+.container .search-bar button:hover{
+    background: #b6ddf3;
+    transition: 0.3s;
+}
+.container .search-bar img{
+    height: 10px;
+    width: 10px;
+}
+.container .search-bar input[type=text]{
+    border: 0.4px solid #000;
+    border-radius: 7px;
+    background: rgb(255, 255, 255);
+    margin: 10px;
+    font-family: 'Sulphur Point', sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
 .container .location {
     margin-bottom: 60px;
     font-size: 30px;
     font-family: 'Quicksand', sans-serif;
     display: flex;
+    align-items: center;
 }
 .container .location img{
-    width: 30px;
-    height: 30px;
-    padding: 5px;
+    width: 28px;
+    height: 28px;
+    padding-right: 5px;
 }
 .wicon{
     display: flex;
@@ -40,26 +72,27 @@ body{
 .wicon #temp{
     font-size: 50px;
     font-family: 'Sulphur Point', sans-serif;
+    text-align: center;
 }
 .wicon #status{
     font-size: 20px;
     font-family: 'Sulphur Point', sans-serif;
 }
-.days{
+.extras{
     padding:40px;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-.days .day{
+.extras .day{
     margin-top: 10px;
     width:150px;
     display: flex;
     justify-content: space-between;
-    font-size: 15px;
+    font-size: 13px;
     font-family: 'Nunito', sans-serif;
 }
-.days .day img{
+.extras .day img{
     height: 20px;
     width: 20px;
 }
