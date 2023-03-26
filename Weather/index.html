@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <div class="search-bar">
-            <input type="text" id="search" spellcheck="false"></input>
+            <input type="text" placeholder="City..." id="search" spellcheck="false"></input>
             <button id="sbutton" onclick="searched(fetchweather)"><img src="https://cdn-icons-png.flaticon.com/512/639/639375.png"></button>        
         </div>
         <div class="location">
-            <img src="Pictures/location.png">
+            <img id="earth" src="Pictures/location.png">
             <p id="city">Tuskegee</p>
         </div>
         <div class="wicon">
@@ -24,17 +24,17 @@
         </div>
         <div class="extras">
             <div class="day">
-                <img src="Pictures/umbrella.png">
+                <img id="rainpic" src="Pictures/umbrella.png">
                 <p>Rain: </p>
                 <p id="rainp">0.0mm</p>
             </div>
             <div class="day">
-                <img src="Pictures/humidity.png">
+                <img id="humidpic" src="Pictures/humidity.png">
                 <p>Humidity:</p>
                 <p id="humidp">40%</p>
             </div>
             <div class="day">
-                <img src="Pictures/wind.png">
+                <img id="windpic" src="Pictures/wind.png">
                 <p>Wind:</p>
                 <p id="windp">9m/s</p>
             </div>

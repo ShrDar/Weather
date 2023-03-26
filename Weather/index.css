@@ -1,19 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Kaushan+Script&family=Lobster&family=Nunito&family=Quicksand:wght@300&family=Roboto:wght@100&family=Rouge+Script&family=Sulphur+Point:wght@300&family=Tangerine&display=swap');*{
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Kaushan+Script&family=Lobster&family=Nunito&family=Quicksand:wght@300&family=Roboto:wght@100&family=Rouge+Script&family=Sulphur+Point:wght@300&family=Tangerine&display=swap');
+*{
     padding: 0;
     margin: 0;
+}
+:root{
+    /*For Body Background*/
+    --nightbg: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+    --daybg: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+    /*For Container Background*/
+    --daycontainerbg: linear-gradient(319deg, #faa499 0%, #f7dd85 37%, #ffc55c 100%);
+    --nightcontainerbg: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
 }
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: var(--daybg);
 }
 .container{
+    height: fit-content;
+    width: fit-content;
     border: 1px solid #000;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: scale(1.2);
+    transition: 0.2s;
+    background: var(--daycontainerbg);
 }
 .container .search-bar{
     display: flex;
@@ -47,7 +63,7 @@ body{
     text-decoration: none;
 }
 .container .location {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     font-size: 30px;
     font-family: 'Quicksand', sans-serif;
     display: flex;
@@ -95,4 +111,10 @@ body{
 .extras .day img{
     height: 20px;
     width: 20px;
+}
+@media screen and (max-width: 600px){
+    .container{
+        transform: scale(1);
+        transition: 0.2s;
+    }
 }
