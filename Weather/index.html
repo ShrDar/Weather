@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="loading" id="loading">
+        <p>Searching...</p>
+        <img src="Pictures/searching.png">
+    </div>
     <div class="container" id="container">
         <div class="search-bar">
-            <input type="text" placeholder="City..." id="search" spellcheck="false"></input>
-            <button id="sbutton" onclick="searched(fetchweather)"><img src="https://cdn-icons-png.flaticon.com/512/639/639375.png"></button>        
+            <input type="text" placeholder="City..." id="search" spellcheck="false" autocomplete="off"></input>
+            <button id="sbutton" onclick="loading()"><img src="https://cdn-icons-png.flaticon.com/512/639/639375.png"></button>        
         </div>
         <div class="location">
             <img id="earth" src="Pictures/location.png">

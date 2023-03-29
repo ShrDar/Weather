@@ -33,8 +33,16 @@ if(time[2]=="d"){
     else if(condition=="Haze"){
         document.getElementById("status").innerHTML="Hazy";
         document.getElementById("weather-icon").src="Pictures/haze.png";
+        document.getElementById("container").style.background="var(--hazycontainerbg)";
+        document.body.style.background="var(--hazybg)";
+
     }
     else if(condition=="Snow"){
+        document.getElementById("container").style.background="var(--snowycontainerbg)";
+        document.getElementById("container").style.color="#fff";
+        document.getElementById("container").style.border="1px solid #000";
+        document.body.style.background="var(--snowybg)";
+
         document.getElementById("status").innerHTML="Snowy";
         document.getElementById("weather-icon").src="Pictures/snowy.png";
     }
@@ -45,6 +53,17 @@ if(time[2]=="d"){
     else if(condition=="Fog"){
         document.getElementById("status").innerHTML="Foggy";
         document.getElementById("weather-icon").src="Pictures/foggy.png";
+    }
+    else if(condition=="Smoke"){
+        document.getElementById("container").style.background="var(--smokycontainerbg)";
+        document.getElementById("status").innerHTML="Smoky";
+        document.getElementById("container").style.color="#fff";
+        document.getElementById("weather-icon").src="Pictures/smoky.png";
+        document.body.style.background="var(--smokybg)";
+    }
+    else if(condition=="Drizzle"){
+        document.getElementById("status").innerHTML="Drizzly";
+        document.getElementById("weather-icon").src="Pictures/drizzly.png";
     }
 }
 else if(time[2]=="n"){
@@ -83,6 +102,10 @@ else if(time[2]=="n"){
     else if(condition=="Fog"){
         document.getElementById("status").innerHTML="Foggy";
         document.getElementById("weather-icon").src="Pictures/foggy.png";
+    }
+    else if(condition=="Thunderstorm"){
+        document.getElementById("status").innerHTML="Thunderstorm";
+        document.getElementById("weather-icon").src="Pictures/thunderstorm.png";
     }
 }
     try{
@@ -133,5 +156,13 @@ input.addEventListener("keypress",function(event){
         document.getElementById("sbutton").click();
     }
 });
-searched(fetchweather);
+function loading(){
+    document.getElementById("container").style.display="none";
+    document.getElementById("loading").style.display="flex";
+    searched(fetchweather);
+    setTimeout(function(){
+        document.getElementById("loading").style.display="none";
+        document.getElementById("container").style.display="flex";
+    },500);
+}
 
