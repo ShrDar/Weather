@@ -65,6 +65,10 @@ if(time[2]=="d"){
         document.getElementById("status").innerHTML="Drizzly";
         document.getElementById("weather-icon").src="Pictures/drizzly.png";
     }
+    else if(condition=="Mist"){
+        document.getElementById("status").innerHTML="Misty";
+        document.getElementById("weather-icon").src="Pictures/drizzly.png";
+    }
 }
 else if(time[2]=="n"){
     document.getElementById("container").style.background="var(--nightcontainerbg)";
@@ -157,12 +161,22 @@ input.addEventListener("keypress",function(event){
     }
 });
 function loading(){
-    document.getElementById("container").style.display="none";
-    document.getElementById("loading").style.display="flex";
+    document.getElementById("container").style.transform="scale(0)";
     searched(fetchweather);
     setTimeout(function(){
-        document.getElementById("loading").style.display="none";
-        document.getElementById("container").style.display="flex";
-    },500);
+        document.getElementById("container").style.transform="scale(1.3)";
+    },800);
 }
+function time(){
+    let d= new Date();
+        month=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+        for(let i=0;i<12;i++){
+            if(d.getMonth()==i){
+                date=month[i]+" "+d.getDate()+", "+d.getFullYear();
+                document.getElementById("date").innerHTML=date;
+            }
+        }
+}
+searched(fetchweather);
+time();
 
