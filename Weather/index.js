@@ -111,6 +111,21 @@ else if(time[2]=="n"){
         document.getElementById("status").innerHTML="Thunderstorm";
         document.getElementById("weather-icon").src="Pictures/thunderstorm.png";
     }
+    else if(condition=="Smoke"){
+        document.getElementById("container").style.background="var(--smokycontainerbg)";
+        document.getElementById("status").innerHTML="Smoky";
+        document.getElementById("container").style.color="#fff";
+        document.getElementById("weather-icon").src="Pictures/smoky.png";
+        document.body.style.background="var(--smokybg)";
+    }
+    else if(condition=="Drizzle"){
+        document.getElementById("status").innerHTML="Drizzly";
+        document.getElementById("weather-icon").src="Pictures/drizzly.png";
+    }
+    else if(condition=="Mist"){
+        document.getElementById("status").innerHTML="Misty";
+        document.getElementById("weather-icon").src="Pictures/misty.png";
+    }
 }
     try{
     rainn=data.rain["1h"];
