@@ -24,6 +24,8 @@ if(time[2]=="d"){
         if(con1=="overcast clouds"){
             document.getElementById("status").innerHTML="Overcast Clouds";
             document.getElementById("weather-icon").src="Pictures/cloudy.png";
+            document.getElementById("container").style.background="var(--overcastcontainerbg)";
+            document.body.style.background="var(--overcastbg)";
         }
     }
     else if(condition=="Clear"){
@@ -68,6 +70,10 @@ if(time[2]=="d"){
     else if(condition=="Mist"){
         document.getElementById("status").innerHTML="Misty";
         document.getElementById("weather-icon").src="Pictures/drizzly.png";
+    }
+    else{
+        document.getElementById("status").innerHTML=condition;
+        
     }
 }
 else if(time[2]=="n"){
@@ -125,6 +131,10 @@ else if(time[2]=="n"){
     else if(condition=="Mist"){
         document.getElementById("status").innerHTML="Misty";
         document.getElementById("weather-icon").src="Pictures/misty.png";
+    }
+    else{
+        document.getElementById("status").innerHTML=condition;
+        
     }
 }
     try{

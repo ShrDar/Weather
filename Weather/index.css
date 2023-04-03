@@ -9,13 +9,15 @@
     --daybg: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
     --snowybg: linear-gradient(315deg, #6a93cb 0%, #a4bfef 74%);
     --smokybg: #5b6265;
-    --hazybg: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);;
+    --hazybg: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    --overcastbg: linear-gradient(90deg,#8A9596,#c3c2c2);
     /*For Container Background*/
     --daycontainerbg: linear-gradient(319deg, #faa499 0%, #f7dd85 37%, #ffc55c 100%);
     --nightcontainerbg: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
     --snowycontainerbg: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
     --smokycontainerbg: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
     --hazycontainerbg: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    --overcastcontainerbg: linear-gradient(315deg, #d3d3d3 0%, #7f8c8d 74%);
 }
 body{
     display: flex;
