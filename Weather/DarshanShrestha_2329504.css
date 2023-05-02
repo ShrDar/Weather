@@ -132,3 +132,15 @@ body{
         transition: 0.5s;
     }
 }
+@media screen and (max-height: 650px){
+    .container{
+        transform: scale(1.1) !important;
+        transition: 0.5s;
+    }
+}
+@media screen and (max-height: 530px){
+    .container{
+        transform: scale(0.7) !important;
+        transition: 0.5s;
+    }
+}
