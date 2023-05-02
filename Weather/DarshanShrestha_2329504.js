@@ -13,6 +13,16 @@ if(time[2]=="d"){
     document.getElementById("container").style.background="var(--daycontainerbg)";
     document.getElementById("container").style.color="#000";
     document.getElementById("container").style.border="1px solid #000";
+    document.getElementById("hdata").style.background="var(--daycontainerbg)";
+    document.getElementById("hdata").style.color="#000";
+    document.getElementById("hdata").style.border="1px solid #000";
+    document.getElementById("past").src="past.png";
+    document.getElementById("htitle").style.borderBottom="1px solid #000";
+    document.getElementById("hwrap").style.borderBottom="1px solid #000";
+    document.getElementById("hwrap1").style.borderBottom="1px solid #000";
+    document.getElementById("hwrap2").style.borderBottom="1px solid #000";
+    document.getElementById("hwrap3").style.borderBottom="1px solid #000";
+    document.getElementById("hwrap4").style.borderBottom="1px solid #000";
     document.body.style.background="var(--daybg)";
     if(condition=="Clouds"){
         document.getElementById("status").innerHTML="Cloudy";
@@ -26,6 +36,7 @@ if(time[2]=="d"){
             document.getElementById("weather-icon").src="cloudy.png";
             document.getElementById("container").style.background="var(--overcastcontainerbg)";
             document.body.style.background="var(--overcastbg)";
+            document.getElementById("hdata").style.background="var(--overcastbg)";
         }
     }
     else if(condition=="Clear"){
@@ -37,13 +48,17 @@ if(time[2]=="d"){
         document.getElementById("weather-icon").src="haze.png";
         document.getElementById("container").style.background="var(--hazycontainerbg)";
         document.body.style.background="var(--hazybg)";
-
+        document.getElementById("hdata").style.background="var(--hazybg)";
     }
     else if(condition=="Snow"){
         document.getElementById("container").style.background="var(--snowycontainerbg)";
         document.getElementById("container").style.color="#fff";
         document.getElementById("container").style.border="1px solid #000";
         document.body.style.background="var(--snowybg)";
+        
+        document.getElementById("hdata").style.background="var(--snowycontainerbg)";
+        document.getElementById("hdata").style.color="#fff";
+        document.getElementById("hdata").style.border="1px solid #000";
 
         document.getElementById("status").innerHTML="Snowy";
         document.getElementById("weather-icon").src="snowy.png";
@@ -62,6 +77,8 @@ if(time[2]=="d"){
         document.getElementById("container").style.color="#fff";
         document.getElementById("weather-icon").src="smoky.png";
         document.body.style.background="var(--smokybg)";
+        document.getElementById("hdata").style.background="var(--smokybg)";
+        document.getElementById("hdata").style.color="#fff";
     }
     else if(condition=="Drizzle"){
         document.getElementById("status").innerHTML="Drizzly";
@@ -80,7 +97,17 @@ else if(time[2]=="n"){
     document.getElementById("container").style.background="var(--nightcontainerbg)";
     document.getElementById("container").style.color="#fff";
     document.getElementById("container").style.border="1px solid #878787";
-    document.body.style.background="var(--nightbg)"
+    document.body.style.background="var(--nightbg)";
+    document.getElementById("hdata").style.background="var(--nightcontainerbg)";
+    document.getElementById("hdata").style.color="#fff";
+    document.getElementById("hdata").style.border="1px solid #878787";
+    document.getElementById("htitle").style.borderBottom="1px solid #878787";
+    document.getElementById("hwrap").style.borderBottom="1px solid #878787";
+    document.getElementById("hwrap1").style.borderBottom="1px solid #878787";
+    document.getElementById("hwrap2").style.borderBottom="1px solid #878787";
+    document.getElementById("hwrap3").style.borderBottom="1px solid #878787";
+    document.getElementById("hwrap4").style.borderBottom="1px solid #878787";
+    document.getElementById("past").src="pastnight.png";
     if(condition=="Clouds"){
         document.getElementById("status").innerHTML="Cloudy";
         document.getElementById("weather-icon").src="mostlycloudymoon.png";
@@ -123,6 +150,9 @@ else if(time[2]=="n"){
         document.getElementById("container").style.color="#fff";
         document.getElementById("weather-icon").src="smoky.png";
         document.body.style.background="var(--smokybg)";
+
+        document.getElementById("hdata").style.background="var(--smokybg)";
+        document.getElementById("hdata").style.color="#fff";
     }
     else if(condition=="Drizzle"){
         document.getElementById("status").innerHTML="Drizzly";
@@ -187,10 +217,14 @@ input.addEventListener("keypress",function(event){
 });
 function loading(){
     document.getElementById("container").style.transform="scale(0)";
+    document.getElementById("hdata").style.transform="scale(0)";
     searched(fetchweather);
     setTimeout(function(){
         document.getElementById("container").style.transform="scale(1.3)";
     },800);
+    setTimeout(function(){
+        document.getElementById("hdata").style.transform="scale(1.1)";
+    },1000);
 }
 function time(){
     let d= new Date();
